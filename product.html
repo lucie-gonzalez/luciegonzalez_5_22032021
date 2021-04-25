@@ -1,87 +1,76 @@
 <!DOCTYPE HTML>
 <html lang="fr">
-    <head>
-        <meta charset="utf-8"/>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="description" content="Orinoco, site d'achat en ligne">
-        <script src="https://kit.fontawesome.com/43d8b34d85.js" crossorigin="anonymous"></script>
-        <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="./css/style.css">
-        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-        <title>Orinoco</title>   
-    </head>
-    <body>
-        <div class=" main bg-danger">
-        <header class="container main-header">
-            <div class="row">
-                <nav class="dropdownmenu col navbar navbar-expand-md bg-danger navbar-light">
-                    <a class= "navbar-brand" href="index.html">
-                    <img src="./images/logo.png" width="140" height="80" alt="Site logo" class="rounded">
-                      </a>
-                      <ul class="navbar-nav ml-auto">
-                        <li class="nav-item">
-                            <a class="nav-link" href="./cart.html"><i class="fas fa-shopping-cart fa-2x"></i>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <p id="cart_produits"></p>
-                        </li>
-                    </ul>
-            </nav>
-        </div>
-        </header>
-        </div>
-        <div class="container  main jumbotron mt-4 shadow-sm text-center">
-            <div class="backToList">
-                <button onclick='location.href="./index.html"' class="btn-danger"><i class="fas fa-arrow-circle-left"></i>Continuer mes achats</button>
-            </div>
-            <h2 id="checkoutTitle"></h2>
-
-            <section id="container">
-                <div id="productCustom"></div> 
-            </section>
-            <br>
-            <div class="checkout" id="addBtn">
-                <button 
-                    type="button"
-                    id="panier"
-                    onclick=""
-                    class="btn btn-add btn-danger">
-                        <i class="fas fa-shopping-cart icon-card"></i>
-                        Ajouter au panier 
-                </button>  
-            </div>
-           
-        </div>
-
-       <!-- FOOTER ! -->
-<footer class="main-footer container">
-    <div class="row">
-        <div class="col">
-            <ul class="list-inline text-center">
-                <li class="list-inline-item m-4"><a href="https://www.facebook.com/"><i
-                            class="fab fa-facebook-square fa-2x"></i></a></li>
-                <li class="list-inline-item m-4"><a href="https://www.twitter.com"><i
-                            class="fab fa-twitter fa-2x"></i></a></li>
-                <li class="list-inline-item m-4"><a href="https://www.instagram.com"><i
-                            class="fab fa-instagram-square fa-2x"></i></a></li>
-            </ul>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col">
-            <p class="text-center">Orinoco | Mentions Légales | Contact </p>
-        </div>
-    </div>
-</footer>
-<!-- FOOTER ! -->
-        
-        <script  src="./js/model/Product.js" defer></script>
-        <script  src="./js/model/Cart.js" defer></script>
-        <script  src="./js/repository/CartRepository.js" defer></script>
-        <script  src="./js/repository/ProductRepository.js" defer></script>
-        <script  src="./js/viewmodel/ProductView.js" defer></script>
-        <script  src="./js/config.js" defer></script>
-            
-    </body>
+	<head>
+		<meta charset="utf-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="Orinoco, site d'achat en ligne">
+		<script src="https://kit.fontawesome.com/43d8b34d85.js" crossorigin="anonymous"></script>
+		<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="./css/style.css">
+		<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+		<title>Orinoco</title>
+	</head>
+	<body>
+		<div class=" main bg-danger">
+			<header class="container main-header">
+				<div class="row">
+					<nav class="dropdownmenu col navbar navbar-expand-md bg-danger navbar-light">
+						<a class= "navbar-brand" href="index.html"><img src="./images/logo.png" width="140" height="80" alt="Site logo" class="rounded"></a>
+						<ul class="navbar-nav ml-auto">
+							<li class="nav-item">
+								<a class="nav-link" href="./cart.html"><i class="fas fa-shopping-cart fa-2x"></i></a>
+							</li>
+							<li class="nav-item"><p id="cart_produits"></p></li>
+						</ul>
+					</nav>
+				</div>
+			</header>
+		</div>
+		<div class="container  main jumbotron mt-4 shadow-sm text-center">
+			<div class="backToList">
+				<button onclick='location.href="./index.html"' class="btn-danger"><i class="fas fa-arrow-circle-left"></i>Continuer mes achats</button>
+			</div>
+			
+			<section id="container">
+                <h2 id="checkoutTitle"></h2>
+				<div id="productCustom"></div>
+			</section>
+			<br>
+			<div class="checkout" id="addBtn">
+				<button type="button" id="panier" onclick=""  class="btn btn-add btn-danger"><i class="fas fa-shopping-cart icon-card"></i>                        Ajouter au panier                 </button>
+			</div>
+		</div>
+		<!-- FOOTER ! -->
+		<footer class="main-footer container">
+			<div class="row">
+				<div class="col">
+					<ul class="list-inline text-center">
+						<li class="list-inline-item m-4">
+							<a href="https://www.facebook.com/"><i class="fab fa-facebook-square fa-2x"></i></a>
+						</li>
+						<li class="list-inline-item m-4">
+							<a href="https://www.twitter.com"><i class="fab fa-twitter fa-2x"></i></a>
+						</li>
+						<li class="list-inline-item m-4">
+							<a href="https://www.instagram.com"><i class="fab fa-instagram-square fa-2x"></i></a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col">
+					<p class="text-center">
+						Orinoco | Mentions Légales | Contact 
+					</p>
+				</div>
+			</div>
+		</footer>
+		<!-- FOOTER ! -->
+		<script  src="./js/model/Product.js" defer></script>
+		<script  src="./js/model/Cart.js" defer></script>
+		<script  src="./js/repository/CartRepository.js" defer></script>
+		<script  src="./js/repository/ProductRepository.js" defer></script>
+		<script  src="./js/viewmodel/ProductView.js" defer></script>
+		<script  src="./js/config.js" defer></script>
+	</body>
 </html>

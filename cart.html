@@ -1,128 +1,107 @@
 <!DOCTYPE HTML>
 <html lang="fr">
-    <head>
-        <meta charset="utf-8"/>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="description" content="Orinoco, site d'achat en ligne">
-        <script src="https://kit.fontawesome.com/43d8b34d85.js" crossorigin="anonymous"></script>
-        <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="./css/style.css">
-        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-        <title>Orinoco</title>   
-    </head>
-    <body>
-        <div class=" main bg-danger">
-            <header class="container main-header">
-                <div class="row">
-                    <nav class="dropdownmenu col navbar navbar-expand-md bg-danger navbar-light">
-                        <a class= "navbar-brand" href="index.html">
-                        <img src="./images/logo.png" width="140" height="80" alt="Site logo" class="rounded">
-                          </a>
-                          <ul class="navbar-nav ml-auto">
-                            <li class="nav-item">
-                                <a class="nav-link" href="./cart.html"><i class="fas fa-shopping-cart fa-2x" aria-hidden="true"></i>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <p class="count" id="cart_produits">
-                                    <span class="d-none d-sm-block bg-dark text-light px-2 rounded-circle"></span>
-                                </p>
-                            </li>
-                        </ul>
-                </nav>
-            </div>
-            </header>
-        </div>
-        
-        <div id="container" class="container font-weight-bold text-center">
-            <div class="hiddenOnForm">
-                <h2 id="checkoutTitle" ></h2>
-                <section id="productContainer"></section>
-                <section id="finalPrice">
-                    <h2>Total panier :</h2>
-                    <h2 id="finalCheckout" ></h2>
-                    <div class="doubleButton row justify-content-center" id="addBtn">
-                        <section id="viderPanier" class="checkout col-4" >
-                            <button
-                                type="button"
-                                id="emptyCart"
-                                class="btn btn-danger"
-                                onclick="">
-                                <i class="fas fa-trash"></i>
-                                Vider le panier 
-                            </button>  
-                        </section>
-                        <section class="checkout col-4" id="confirmPanier">
-                            <button 
-                                type="button"
-                                id="confirmCart"
-                                class="btn btn-danger"
-                                onclick=""
-                                class="btn-Confirm">
-                                <i class="fas fa-check-circle"></i>
-                                Confirmer le panier
-                            </button>   
-                        </section>
-                    </div>
-                </section>
-            </div> 
-            <section id="form">  
-                <div id="onclick">
-                    <form class="form-container" id="postData">
-                        <label for="firstName"><strong>Prénom</strong></label>
-                        <input type="text" name="firstName" placeholder="Votre prénom..." id="firstName" maxlength="20" required>
-
-                        <label for="lastName"><strong>Nom</strong></label>
-                        <input type="text" name="lastName" placeholder="Votre nom..." id="lastName" maxlength="30" required>
-
-                        <label for="address"><strong>Adresse</strong></label>
-                        <input type="text" name="address" placeholder="Votre adresse..." id="address" maxlength="60" required>
-
-                        <label for="city"><strong>Ville</strong></label>
-                        <input type="text" name="city" placeholder="Votre ville..." id="city" maxlength="35" required>
-
-                        <label for="email"><strong>Email</strong></label>
-                        <input type="email" name="email" placeholder="exemple123@test.com" id="email" required>
-
-                        <div class="buttons">
-                            <button type="button" id="validate" onclick="" ><i class="fas fa-check"></i> Valider</button>
-                            <button type="button" class="closeForm" id="close" onclick="" ><i class="fas fa-times"></i> Fermer</button>
-                        </div>
-                    </form>
-
-                </div>
-            </section>
-        </div>
-
-  
-
-        <!-- FOOTER ! -->
-<footer class="main-footer container">
-    <div class="row">
-        <div class="col">
-            <ul class="list-inline text-center">
-                <li class="list-inline-item m-4"><a href="https://www.facebook.com/"><i
-                            class="fab fa-facebook-square fa-2x"></i></a></li>
-                <li class="list-inline-item m-4"><a href="https://www.twitter.com"><i
-                            class="fab fa-twitter fa-2x"></i></a></li>
-                <li class="list-inline-item m-4"><a href="https://www.instagram.com"><i
-                            class="fab fa-instagram-square fa-2x"></i></a></li>
-            </ul>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col">
-            <p class="text-center">Orinoco | Mentions Légales | Contact </p>
-        </div>
-    </div>
-</footer>
-<!-- FOOTER ! -->
-       
-        <script  src="./js/model/Cart.js" defer></script>
-        <script  src="./js/model/Order.js"defer></script>
-        <script  src="./js/repository/OrderRepository.js"defer></script>
-        <script  src="./js/repository/CartRepository.js"defer></script>
-        <script  src="./js/viewmodel/CartView.js" defer></script>
-        <window class="onload"></window>
-    </body>
+	<head>
+		<meta charset="utf-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="Orinoco, site d'achat en ligne">
+		<script src="https://kit.fontawesome.com/43d8b34d85.js" crossorigin="anonymous"></script>
+		<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="./css/style.css">
+		<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+		<title>Orinoco</title>
+	</head>
+	<body>
+		<div class=" main bg-danger">
+			<header class="container main-header">
+				<div class="row">
+					<nav class="dropdownmenu col navbar navbar-expand-md bg-danger navbar-light">
+						<a class= "navbar-brand" href="index.html"><img src="./images/logo.png" width="140" height="80" alt="Site logo" class="rounded"></a>
+						<ul class="navbar-nav ml-auto">
+							<li class="nav-item">
+								<a class="nav-link" href="./cart.html"><i class="fas fa-shopping-cart fa-2x" aria-hidden="true"></i></a>
+							</li>
+							<li class="nav-item">
+								<p class="count" id="cart_produits">
+									<span class="d-none d-sm-block bg-dark text-light px-2 rounded-circle"></span>
+								</p>
+							</li>
+						</ul>
+					</nav>
+				</div>
+			</header>
+		</div>
+		<div id="container" class="container font-weight-bold text-center">
+			<div class="hiddenOnForm">
+				<section id="productContainer">
+					<h2 id="checkoutTitle" ></h2>
+				</section>
+				<section id="finalPrice">
+					<h2>Total panier :</h2>
+					<h2 id="finalCheckout"></h2>
+					<div class="doubleButton row justify-content-center" id="addBtn">
+						<section id="viderPanier" class="checkout col-4">
+							<h2></h2>
+							<button type="button" id="emptyCart" class="btn btn-danger" onclick=""><i class="fas fa-trash"></i>                                 Vider  le  panier                              </button>
+						</section>
+						<section class="checkout col-4" id="confirmPanier">
+							<h2></h2>
+							<button  type="button" id="confirmCart" class="btn btn-danger btn-Confirm" onclick=""><i class="fas fa-check-circle"></i>                               Confirmer le panier                              </button>
+						</section>
+					</div>
+				</section>
+			</div>
+			<section id="form">
+				<h2>coordonées</h2>
+				<div id="onclick">
+					<form class="form-container" id="postData">
+						<label for="firstName"><strong>Prénom</strong></label>
+						<input type="text" name="firstName" placeholder="Votre prénom..." id="firstName" maxlength="20" required>
+						<label for="lastName"><strong>Nom</strong></label>
+						<input type="text" name="lastName" placeholder="Votre nom..." id="lastName" maxlength="30" required>
+						<label for="address"><strong>Adresse</strong></label>
+						<input type="text" name="address" placeholder="Votre adresse..." id="address" maxlength="60" required>
+						<label for="city"><strong>Ville</strong></label>
+						<input type="text" name="city" placeholder="Votre ville..." id="city" maxlength="35" required>
+						<label for="email"><strong>Email</strong></label>
+						<input type="email" name="email" placeholder="exemple123@test.com" id="email" required>
+						<div class="buttons">
+							<button type="button" id="validate" onclick="" ><i class="fas fa-check"></i> Valider</button>
+							<button type="button" class="closeForm" id="close" onclick="" ><i class="fas fa-times"></i> Fermer</button>
+						</div>
+					</form>
+				</div>
+			</section>
+		</div>
+		<!-- FOOTER ! -->
+		<footer class="main-footer container">
+			<div class="row">
+				<div class="col">
+					<ul class="list-inline text-center">
+						<li class="list-inline-item m-4">
+							<a href="https://www.facebook.com/"><i class="fab fa-facebook-square fa-2x"></i></a>
+						</li>
+						<li class="list-inline-item m-4">
+							<a href="https://www.twitter.com"><i class="fab fa-twitter fa-2x"></i></a>
+						</li>
+						<li class="list-inline-item m-4">
+							<a href="https://www.instagram.com"><i class="fab fa-instagram-square fa-2x"></i></a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col">
+					<p class="text-center">
+						Orinoco | Mentions Légales | Contact 
+					</p>
+				</div>
+			</div>
+		</footer>
+		<!-- FOOTER ! -->
+		<script  src="./js/model/Cart.js"></script>
+		<script  src="./js/model/Order.js"></script>
+		<script  src="./js/repository/OrderRepository.js"></script>
+		<script  src="./js/repository/CartRepository.js"></script>
+		<script  src="./js/viewmodel/CartView.js"></script>
+	</body>
 </html>
