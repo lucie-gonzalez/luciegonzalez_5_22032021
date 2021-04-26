@@ -185,7 +185,7 @@
      
             orderRepository.saveOrder(contact, totalCost);
             swal("Merci pour votre commande !", "Vous allez être redirigé vers la page de confirmation dans un instant", "success");
-            setTimeout(function() {window.location = 'order.html'; }, 3000);  // Redirection vers page order au bout de 3 secondes
+            setTimeout(function() {window.location = 'order.html'; }, 2000);  // Redirection vers page order au bout de 2 secondes
 
           }
         
